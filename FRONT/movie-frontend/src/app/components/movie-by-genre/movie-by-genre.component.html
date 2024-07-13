@@ -1,0 +1,31 @@
+<div class="movie-genre-container">
+    <h2>Películas por Género</h2>
+    <form [formGroup]="genreForm" (ngSubmit)="onGenreChange()" class="genre-form">
+      <div class="form-group">
+        <label for="genre">Seleccione un Género:</label>
+        <select id="genre" formControlName="genreId" class="form-control">
+          <option value="">Todos los géneros</option>
+          <option *ngFor="let genre of genres" [value]="genre.id">{{ genre.nombre }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <div *ngIf="movies.length > 0; else noMovies">
+      <h3>Películas:</h3>
+      <p>Se encontraron {{contadorEspecifico}}/{{contadorGeneral}} películas</p>
+      <div class="movie-list">
+        <div *ngFor="let movie of movies" class="movie-card">
+          <img [src]="movie.poster_url" alt="{{ movie.titulo }}" class="movie-poster">
+          <div class="movie-details">
+            <h4>{{ movie.titulo }}</h4>
+            <p>{{ movie.descripcion }}</p>
+            <p>Rating: {{ movie.rating }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noMovies>
+      <p>No se encontraron películas para el género seleccionado.</p>
+    </ng-template>
+  </div>
+  

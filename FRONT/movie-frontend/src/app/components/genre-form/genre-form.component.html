@@ -1,0 +1,28 @@
+<div class="genre-form-container">
+  <h2>Añadir Género</h2>
+  <form [formGroup]="genreForm" (ngSubmit)="submit()" class="genre-form">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" formControlName="nombre" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">{{ editingGenre ? 'Actualizar Género' : 'Añadir Género' }}</button>
+  </form>
+  <h3>Lista de Géneros</h3>
+  <table class="genre-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th class="actions-column">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let genre of genres">
+        <td>{{ genre.nombre }}</td>
+        <td class="actions-column">
+          <button class="btn btn-secondary" (click)="editGenre(genre)">Editar</button>
+          <button class="btn btn-danger" (click)="deleteGenre(genre.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

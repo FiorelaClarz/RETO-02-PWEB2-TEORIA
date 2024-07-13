@@ -1,0 +1,64 @@
+<p>edit-movie works!</p>
+<div class="edit-movie-container">
+  <h2>Editar Película</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="submit()" class="edit-movie-form">
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="titulo" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Calificación:</label>
+      <input type="number" id="rating" formControlName="rating" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="poster_url">URL del Poster:</label>
+      <input id="poster_url" formControlName="poster_url" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>Géneros:</label>
+      <div class="checkbox-group" *ngFor="let genre of genres">
+        <input type="checkbox" [value]="genre.id" (change)="onCheckboxChange($event)" [checked]="isChecked(genre.id)" id="{{'genre-' + genre.id}}" />
+        <label for="{{'genre-' + genre.id}}">{{ genre.nombre }}</label>
+      </div>
+    </div>
+    <div class="button-group">
+      <button type="submit" class="btn btn-primary">Actualizar Película</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- <p>edit-movie works!</p>
+<div>
+  <h2>Editar Película</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="submit()">
+    <div>
+      <label>Title:</label>
+      <input formControlName="titulo" />
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea formControlName="descripcion"></textarea>
+    </div>
+    <div>
+      <label>Rating:</label>
+      <input type="number" formControlName="rating" />
+    </div>
+    <div>
+      <label>Poster URL:</label>
+      <input formControlName="poster_url" />
+    </div>
+    <div>
+      <label>Genres:</label>
+      <div *ngFor="let genre of genres">
+        <input type="checkbox" [value]="genre.id" (change)="onCheckboxChange($event)" [checked]="isChecked(genre.id)" /> {{ genre.nombre }}
+      </div>
+    </div>
+    <button type="submit">Update Movie</button>
+  </form>
+</div> -->

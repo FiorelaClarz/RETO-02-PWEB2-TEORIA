@@ -1,0 +1,32 @@
+<div class="movie-form-container">
+  <h2>Añadir Película</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="submit()" class="movie-form">
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="titulo" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Calificación:</label>
+      <input type="number" id="rating" formControlName="rating" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="poster_url">URL del Poster:</label>
+      <input id="poster_url" formControlName="poster_url" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>Géneros:</label>
+      <div class="checkbox-group">
+        <div *ngFor="let genre of genres" class="checkbox">
+          <input type="checkbox" [value]="genre.id" (change)="onCheckboxChange($event)" /> {{ genre.nombre }}
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Añadir Película</button>
+  </form>
+</div>
+
+

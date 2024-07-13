@@ -1,0 +1,104 @@
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .movie-genre-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-genre-container h2, .movie-genre-container h3 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  .genre-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .genre-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  .genre-form .form-control {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+  
+  .btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--card-bg-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .movie-card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .movie-details {
+    margin-top: 10px;
+  }
+  
+  .movie-details h4 {
+    margin: 10px 0 5px;
+    color: var(--accent-color);
+  }
+  
+  .movie-details p {
+    margin: 5px 0;
+  }

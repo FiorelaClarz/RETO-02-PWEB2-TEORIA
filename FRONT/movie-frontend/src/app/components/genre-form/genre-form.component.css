@@ -1,0 +1,111 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .genre-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .genre-form-container h2, .genre-form-container h3 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  .genre-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .genre-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  .genre-form .form-control {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+  
+  .btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--card-bg-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .btn-secondary {
+    background-color: var(--accent-color);
+    margin: 0 5px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+    margin: 0 5px;
+  }
+  
+  .btn-danger:hover {
+    background-color: var(--danger-hover-color);
+  }
+  
+  .genre-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .genre-table th, .genre-table td {
+    border: 1px solid var(--accent-color);
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .genre-table th {
+    background-color: var(--secondary-color);
+    color: var(--card-bg-color);
+  }
+  
+  .genre-table td {
+    background-color: var(--card-bg-color);
+  }
+  
+  .genre-table tr:hover td {
+    background-color: var(--background-color);
+  }
+  
+  .actions-column {
+    width: 150px;
+    text-align: right;
+  }

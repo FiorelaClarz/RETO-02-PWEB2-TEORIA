@@ -1,0 +1,86 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .edit-movie-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .edit-movie-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+  
+  .edit-movie-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .edit-movie-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+  }
+  
+  .edit-movie-form .form-control {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+  
+  .edit-movie-form textarea.form-control {
+    height: 100px;
+  }
+  
+  .edit-movie-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .edit-movie-form .checkbox-group input {
+    margin-right: 10px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    width: 48%;
+  }
+  
+  .btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .btn-secondary {
+    background-color: var(--primary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--hover-color);
+  }

@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #2c2c54; /* Morado oscuro */
+  --secondary-color: #706fd3; /* Morado vibrante */
+  --accent-color: #34ace0; /* Azul claro */
+  --background-color: #f0f4f8; /* Tono pastel más claro */
+  --hover-color: #227093; /* Azul más oscuro */
+  --text-color: #2c2c54; /* Texto morado oscuro */
+  --card-bg-color: #ffffff; /* Fondo blanco para las tarjetas */
+  --badge-color: #ffda79; /* Color amarillo para las insignias */
+  --card-text-color: #2c2c54; /* Color del texto en las tarjetas */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Color de la sombra */
+  --danger-color: #e74c3c; /* Color rojo para botones de eliminar */
+  --danger-hover-color: #c0392b; /* Color rojo más oscuro para hover */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-list-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  text-align: center;
+}
+
+.movie-list-container h1 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  font-size: 28px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.genre-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.genre-buttons .btn {
+  margin: 5px;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.movie-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  width: calc(25% - 10px); /* 4 cards per row with minimal gaps */
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Increase height for better image display */
+  object-fit: cover;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.card-body {
+  padding: 10px; /* Reduced padding for the text section */
+  height: 150px; /* Fixed height to keep the text section shorter */
+  overflow: hidden; /* Ensure overflow is hidden if content is too long */
+}
+
+.card-title {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.card-text {
+  margin-bottom: 10px; /* Reduced margin */
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: var(--badge-color);
+  color: var(--text-color);
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--card-bg-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-hover-color);
+}
+
+/* Remove text decoration and visited color from links in movie cards */
+.movie-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-card a:hover, .movie-card a:focus, .movie-card a:active, .movie-card a:visited {
+  text-decoration: none;
+  color: inherit;
+}

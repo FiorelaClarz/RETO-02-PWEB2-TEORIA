@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #333; /* Dark Gray */
+    --secondary-color: #ff6347; /* Tomato */
+    --accent-color: #ffd700; /* Gold */
+    --background-color: #f0f4f8; /* Light Gray */
+    --hover-color: #ff4500; /* OrangeRed */
+    --text-color: #000000; /* Black */
+    --link-bg-color: #ffffff; /* White */
+    --link-hover-bg-color: #e0e0e0; /* Light Gray */
+    --nav-bg-color: #282c34; /* Dark Background */
+    --nav-bg-gradient: linear-gradient(90deg, #282c34, #333); /* Subtle Gradient */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow */
+    --transition-duration: 0.3s; /* Transition Duration */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-gradient); /* Gradient Background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: background-color var(--transition-duration), padding var(--transition-duration);
+  }
+  
+  .logo img {
+    height: 50px;
+    transition: transform var(--transition-duration);
+  }
+  
+  .logo img:hover {
+    transform: rotate(360deg);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    background-color: var(--link-bg-color);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color var(--transition-duration), color var(--transition-duration), transform var(--transition-duration);
+  }
+  
+  .nav-links a:hover {
+    background-color: var(--link-hover-bg-color);
+    color: var(--hover-color);
+    transform: scale(1.05);
+  }
+  
+  /* Add top margin to main content to avoid overlap with navbar */
+  .main-content {
+    margin-top: 80px; /* Adjust this value according to your navbar height */
+  }
+  

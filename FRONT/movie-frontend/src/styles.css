@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #2c2c54; /* Morado oscuro */
+    --secondary-color: #706fd3; /* Morado vibrante */
+    --accent-color: #34ace0; /* Azul claro */
+    --background-color: #f0f4f8; /* Tono pastel más claro */
+    --hover-color: #227093; /* Azul más oscuro */
+    --text-color: #2c2c54; /* Texto morado oscuro */
+    --card-bg-color: #ffffff; /* Fondo blanco para las tarjetas */
+    --badge-color: #ffda79; /* Color amarillo para las insignias */
+    --card-text-color: #2c2c54; /* Color del texto en las tarjetas */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Color de la sombra */
+    --danger-color: #e74c3c; /* Color rojo para botones de eliminar */
+    --danger-hover-color: #c0392b; /* Color rojo más oscuro para hover */
+  }
+body {
+    margin: 0;
+  }

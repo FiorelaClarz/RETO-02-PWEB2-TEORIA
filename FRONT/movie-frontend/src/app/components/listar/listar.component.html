@@ -1,0 +1,33 @@
+<div class="movie-list-container">
+    <h1>Películas</h1>
+    <div class="genre-buttons">
+    </div>
+    <table class="movie-table">
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Géneros</th>
+          <th>Rating</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td><img [src]="movie.poster_url" alt="{{ movie.titulo }} poster" class="table-img"></td>
+          <td>{{ movie.titulo }}</td>
+          <td class="description">{{ movie.descripcion }}</td>
+          <td>
+            <span *ngFor="let genre of movie.generos" class="badge">{{ genre.nombre }}</span>
+          </td>
+          <td>{{ movie.rating }}/5</td>
+          <td>
+            <button (click)="editMovie(movie.id)" class="btn btn-secondary">Editar</button>
+            <button (click)="deleteMovie(movie.id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
